@@ -1,0 +1,435 @@
+
+GATE $__ZERO 0 Y=CONST0;
+GATE $__ONE 0 Y=CONST1;
+
+GATE $_BUF_ 5 Y=A;
+PIN * NONINV 1 9999 10 5 10 5
+
+GATE inv 1 Q=!A;
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand2i0 1 Q=!(A & B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand2i1 1 Q=!(A & !B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand2i2 1 Q=!(!A & !B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand3i0 1 Q=!(A & B & C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand3i1 1 Q=!(A & B & !C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand3i2 1 Q=!(A & !B & !C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand3i3 1 Q=!(!A & !B & !C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand4i0 1 Q=!(A & B & C & D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand4i1 1 Q=!(A & B & C & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand4i2 1 Q=!(A & B & !C & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand4i3 1 Q=!(A & !B & !C & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand4i4 1 Q=!(!A & !B & !C & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand5i0 1 Q=!(A & B & C & D & E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand5i1 1 Q=!(A & B & C & D & !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand5i2 1 Q=!(A & B & C & !D & !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand5i3 1 Q=!(A & B & !C & !D & !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand5i4 1 Q=!(A & !B & !C & !D & !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand5i5 1 Q=!(!A & !B & !C & !D & !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand6i0 1 Q=!(A & B & C & D & E & F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand6i1 1 Q=!(A & B & C & D & E & !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand6i2 1 Q=!(A & B & C & D & !E & !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand6i3 1 Q=!(A & B & C & !D & !E & !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand6i4 1 Q=!(A & B & !C & !D & !E & !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand6i5 1 Q=!(A & !B & !C & !D & !E & !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand6i6 1 Q=!(!A & !B & !C & !D & !E & !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor2i0 1 Q=!(A | B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor2i1 1 Q=!(A | !B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor2i2 1 Q=!(!A | !B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor3i0 1 Q=!(A | B | C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor3i1 1 Q=!(A | B | !C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor3i2 1 Q=!(A | !B | !C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor3i3 1 Q=!(!A | !B | !C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor4i0 1 Q=!(A | B | C | D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor4i1 1 Q=!(A | B | C | !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor4i2 1 Q=!(A | B | !C | !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor4i3 1 Q=!(A | !B | !C | !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor4i4 1 Q=!(!A | !B | !C | !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor5i0 1 Q=!(A | B | C | D | E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor5i1 1 Q=!(A | B | C | D | !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor5i2 1 Q=!(A | B | C | !D | !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor5i3 1 Q=!(A | B | !C | !D | !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor5i4 1 Q=!(A | !B | !C | !D | !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor5i5 1 Q=!(!A | !B | !C | !D | !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor6i0 1 Q=!(A | B | C | D | E | F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor6i1 1 Q=!(A | B | C | D | E | !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor6i2 1 Q=!(A | B | C | D | !E | !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor6i3 1 Q=!(A | B | C | !D | !E | !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor6i4 1 Q=!(A | B | !C | !D | !E | !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor6i5 1 Q=!(A | !B | !C | !D | !E | !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor6i6 1 Q=!(!A | !B | !C | !D | !E | !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and2i0 1 Q=(A & B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and2i1 1 Q=(A & !B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and2i2 1 Q=(!A & !B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and3i0 1 Q=(A & B & C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and3i1 1 Q=(A & B & !C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and3i2 1 Q=(A & !B & !C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and3i3 1 Q=(!A & !B & !C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and4i0 1 Q=(A & B & C & D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and4i1 1 Q=(A & B & C & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and4i2 1 Q=(A & B & !C & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and4i3 1 Q=(A & !B & !C & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and4i4 1 Q=(!A & !B & !C & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and5i0 1 Q=(A & B & C & D & E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and5i1 1 Q=(A & B & C & D & !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and5i2 1 Q=(A & B & C & !D & !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and5i3 1 Q=(A & B & !C & !D & !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and5i4 1 Q=(A & !B & !C & !D & !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and5i5 1 Q=(!A & !B & !C & !D & !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and6i0 1 Q=(A & B & C & D & E & F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and6i1 1 Q=(A & B & C & D & E & !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and6i2 1 Q=(A & B & C & D & !E & !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and6i3 1 Q=(A & B & C & !D & !E & !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and6i4 1 Q=(A & B & !C & !D & !E & !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and6i5 1 Q=(A & !B & !C & !D & !E & !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and6i6 1 Q=(!A & !B & !C & !D & !E & !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or2i0 1 Q=(A | B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or2i1 1 Q=(A | !B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or2i2 1 Q=(!A | !B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or3i0 1 Q=(A | B | C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or3i1 1 Q=(A | B | !C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or3i2 1 Q=(A | !B | !C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or3i3 1 Q=(!A | !B | !C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or4i0 1 Q=(A | B | C | D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or4i1 1 Q=(A | B | C | !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or4i2 1 Q=(A | B | !C | !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or4i3 1 Q=(A | !B | !C | !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or4i4 1 Q=(!A | !B | !C | !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or5i0 1 Q=(A | B | C | D | E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or5i1 1 Q=(A | B | C | D | !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or5i2 1 Q=(A | B | C | !D | !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or5i3 1 Q=(A | B | !C | !D | !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or5i4 1 Q=(A | !B | !C | !D | !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or5i5 1 Q=(!A | !B | !C | !D | !E);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or6i0 1 Q=(A | B | C | D | E | F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or6i1 1 Q=(A | B | C | D | E | !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or6i2 1 Q=(A | B | C | D | !E | !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or6i3 1 Q=(A | B | C | !D | !E | !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or6i4 1 Q=(A | B | !C | !D | !E | !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or6i5 1 Q=(A | !B | !C | !D | !E | !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or6i6 1 Q=(!A | !B | !C | !D | !E | !F);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand7i0 1 Q=!(A & B & C & D & E & F & G);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand8i0 1 Q=!(A & B & C & D & E & F & G & H);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand13i6 1 Q=!(A & B & C & D & E & F & G & !H & !I & !J & !K & !L & !M);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nand15i6 1 Q=!(A & B & C & D & E & F & G & H & I & !J & !K & !L & !M & !N & !O);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor7i0 1 Q=!(A | B | C | D | E | F | G);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor9i5 1 Q=!(A | B | C | D | !E | !F | !G | !H | !I);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor14i7 1 Q=!(A | B | C | D | E | F | G | !H | !I | !J | !K | !L | !M | !N);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE nor16i9 1 Q=!(A | B | C | D | E | F | G | !H | !I | !J | !K | !L | !M | !N | !O | !P);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and7i0 1 Q=(A & B & C & D & E & F & G);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and7i1 1 Q=(A & B & C & D & E & F & !G);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and8i0 1 Q=(A & B & C & D & E & F & G & H);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and8i1 1 Q=(A & B & C & D & E & F & G & !H);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and9i4 1 Q=(A & B & C & D & E & !F & !G & !H & !I);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and14i7 1 Q=(A & B & C & D & E & F & G & !H & !I & !J & !K & !L & !M & !N);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE and16i7 1 Q=(A & B & C & D & E & F & G & H & I & !J & !K & !L & !M & !N & !O & !P);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or13i6 1 Q=(A | B | C | D | E | F | G | !H | !I | !J | !K | !L | !M);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE or15i8 1 Q=(A | B | C | D | E | F | G | !H | !I | !J | !K | !L | !M | !N | !O);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE xor2i0 1 Q=(!A & B) | (A & !B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE xor3i0 1 Q=(!A & !B & C) | (!A & B & !C) | (A & !B & !C) | (A & B & C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE xor4i0 1 Q=(!A & !B & !C & D) | (!A & !B & C & !D) | (!A & B & !C & !D) | (!A & B & C & D) | (A & !B & !C & !D) | (A & !B & C & D) | (A & B & !C & D) | (A & B & C & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE xnor2i0 1 Q=(!A & !B) | (A & B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE xnor3i0 1 Q=(!A & !B & !C) | (!A & B & C) | (A & !B & C) | (A & B & !C);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux2x0 1 Q=(!S & A) | (S & B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux2x1 1 Q=(!S & !A) | (S & B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux2x2 1 Q=(!S & A) | (S & !B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux2x3 1 Q=(!S & !A) | (S & !B);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux4x0 1 Q=(!S1 & !S0 & A) | (!S1 & S0 & B) | (S1 & !S0 & C) | (S1 & S1 & D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux4x1 1 Q=(!S1 & !S0 & !A) | (!S1 & S0 & B) | (S1 & !S0 & C) | (S1 & S1 & D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux4x2 1 Q=(!S1 & !S0 & A) | (!S1 & S0 & !B) | (S1 & !S0 & C) | (S1 & S1 & D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux4x3 1 Q=(!S1 & !S0 & !A) | (!S1 & S0 & !B) | (S1 & !S0 & C) | (S1 & S1 & D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux4x4 1 Q=(!S1 & !S0 & A) | (!S1 & S0 & B) | (S1 & !S0 & !C) | (S1 & S1 & D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux4x5 1 Q=(!S1 & !S0 & !A) | (!S1 & S0 & B) | (S1 & !S0 & !C) | (S1 & S1 & D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux4x6 1 Q=(!S1 & !S0 & A) | (!S1 & S0 & !B) | (S1 & !S0 & !C) | (S1 & S1 & D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux4x7 1 Q=(!S1 & !S0 & !A) | (!S1 & S0 & !B) | (S1 & !S0 & !C) | (S1 & S1 & D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux4x8 1 Q=(!S1 & !S0 & A) | (!S1 & S0 & B) | (S1 & !S0 & C) | (S1 & S1 & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux4x9 1 Q=(!S1 & !S0 & !A) | (!S1 & S0 & B) | (S1 & !S0 & C) | (S1 & S1 & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux4xa 1 Q=(!S1 & !S0 & A) | (!S1 & S0 & !B) | (S1 & !S0 & C) | (S1 & S1 & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux4xb 1 Q=(!S1 & !S0 & !A) | (!S1 & S0 & !B) | (S1 & !S0 & C) | (S1 & S1 & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux4xc 1 Q=(!S1 & !S0 & A) | (!S1 & S0 & B) | (S1 & !S0 & !C) | (S1 & S1 & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux4xd 1 Q=(!S1 & !S0 & !A) | (!S1 & S0 & B) | (S1 & !S0 & !C) | (S1 & S1 & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux4xe 1 Q=(!S1 & !S0 & A) | (!S1 & S0 & !B) | (S1 & !S0 & !C) | (S1 & S1 & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5
+
+GATE mux4xf 1 Q=(!S1 & !S0 & !A) | (!S1 & S0 & !B) | (S1 & !S0 & !C) | (S1 & S1 & !D);
+PIN * UNKNOWN 1 9999 10 5 10 5

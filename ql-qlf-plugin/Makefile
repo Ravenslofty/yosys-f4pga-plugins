@@ -18,6 +18,7 @@ PLUGIN_DIR := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
 
 NAME = ql-qlf
 SOURCES = synth_quicklogic.cc \
+          synth_eclipse2.cc \
           ql-dsp.cc \
           pp3_braminit.cc \
           quicklogic_eqn.cc \
@@ -44,6 +45,7 @@ QLF_K4N8_DIR    = qlf_k4n8
 QLF_K6N10_DIR   = qlf_k6n10
 QLF_K6N10F_DIR  = qlf_k6n10f
 PP3_DIR         = pp3
+ECLIPSE2_DIR    = eclipse2
 VERILOG_MODULES = $(COMMON)/cells_sim.v         \
                   $(QLF_K4N8_DIR)/arith_map.v   \
                   $(QLF_K4N8_DIR)/cells_sim.v   \
@@ -94,7 +96,12 @@ VERILOG_MODULES = $(COMMON)/cells_sim.v         \
                   $(PP3_DIR)/bram_init_32.vh   \
                   $(PP3_DIR)/qlal4s3b_sim.v    \
                   $(PP3_DIR)/mult_sim.v        \
-                  $(PP3_DIR)/qlal3_sim.v
+                  $(PP3_DIR)/qlal3_sim.v       \
+                  $(ECLIPSE2_DIR)/alu_map.v    \
+                  $(ECLIPSE2_DIR)/cells_gen.v  \
+                  $(ECLIPSE2_DIR)/cells_sim.v  \
+                  $(ECLIPSE2_DIR)/dff_map.v
+GENLIBS         = $(ECLIPSE2_DIR)/eclipse2.genlib
 
 PMGEN_OUT_DIR := $(BUILD_DIR)/pmgen
 
@@ -123,7 +130,7 @@ $(PMGEN_OUT_DIR)/ql-bram-asymmetric-wider-read.h: ql-bram-asymmetric-wider-read.
 	python3 $(PMGEN_PY) -o $@ -p ql_bram_asymmetric_wider_read ql-bram-asymmetric-wider-read.pmg
 
 
-install_modules: $(VERILOG_MODULES)
+install_modules: $(VERILOG_MODULES) $(GENLIBS)
 	$(foreach f,$^,install -D $(f) $(YOSYS_DATA_DIR)/quicklogic/$(f);)
 
 install: install_modules
