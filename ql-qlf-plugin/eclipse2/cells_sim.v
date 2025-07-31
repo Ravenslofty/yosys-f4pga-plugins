@@ -154,6 +154,29 @@ module dlap (
       else if (G) Q = D;
 endmodule
 
+module shft4 (
+  output reg [3:0] Q,
+  (* clkbuf_sink *)
+  input SI,
+  (* clkbuf_sink *)
+  input CLK,
+  (* clkbuf_sink *)
+  input CLR,
+  (* clkbuf_sink *)
+  input [3:0] D,
+  (* clkbuf_sink *)
+  input EN,
+  (* clkbuf_sink *)
+  input LOAD
+);
+initial Q = 4'b0;
+
+always @(posedge CLK or posedge CLR)
+  if (CLR) Q <= 4'b0;
+  else if (LOAD) Q <= D;
+  else if (EN) Q <= {Q[2:0], SI};
+endmodule
+
 module fadd1_p2 (
   output S,
   output CO,

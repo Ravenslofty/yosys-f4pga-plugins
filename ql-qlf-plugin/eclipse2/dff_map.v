@@ -16,15 +16,15 @@
 
 `default_nettype none
 
-module \$_DFF_P_ (input C, D, output Q);
+module \$_DFF_P_ (input D, C, output Q);
 dff _TECHMAP_REPLACE_ (.Q(Q), .D(D), .CLK(C));
 endmodule
 
-module \$_DFF_PP0_ (input C, D, R, output Q);
+module \$_DFF_PP0_ (input D, C, R, output Q);
 dffc _TECHMAP_REPLACE_ (.Q(Q), .D(D), .CLK(C), .CLR(R));
 endmodule
 
-module \$_DFF_PP1_ (input C, D, R, output Q);
+module \$_DFF_PP1_ (input D, C, R, output Q);
 dffp _TECHMAP_REPLACE_ (.Q(Q), .D(D), .CLK(C), .PRE(R));
 endmodule
 
@@ -36,10 +36,22 @@ module \$_DLATCH_P_ (input E, D, output Q);
 dla _TECHMAP_REPLACE_ (.Q(Q), .D(D), .G(E));
 endmodule
 
-module \$_DLATCH_PP0_ (input E, D, R, output Q);
+module \$_DLATCH_PP0_ (input E, R, D, output Q);
 dlac _TECHMAP_REPLACE_ (.Q(Q), .D(D), .G(E), .CLR(R));
 endmodule
 
-module \$_DLATCH_PP1_ (input E, D, R, output Q);
+module \$_DLATCH_PP1_ (input E, R, D, output Q);
 dlap _TECHMAP_REPLACE_ (.Q(Q), .D(D), .G(E), .PRE(R));
+endmodule
+
+module \$__SHREG_DFFE_PP_ (input D, C, E, output Q);
+wire [3:0] q;
+shft4 _TECHMAP_REPLACE_ (.Q(q), .SI(D), .CLK(C), .CLR(1'b0), .D(4'b0), .EN(E), .LOAD(1'b0));
+assign Q = q[3];
+endmodule
+
+module \$__SHREG_DFF_P_ (input D, C, output Q);
+wire [3:0] q;
+shft4 _TECHMAP_REPLACE_ (.Q(q), .SI(D), .CLK(C), .CLR(1'b0), .D(4'b0), .EN(1'b1), .LOAD(1'b0));
+assign Q = q[3];
 endmodule
