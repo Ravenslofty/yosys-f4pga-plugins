@@ -184,8 +184,8 @@ struct SynthEclipse2Pass : public ScriptPass {
 		if (check_label("map_ffs")) {
 			run("techmap");
 			// briefly include $_DFFE_PP_ to attempt to infer shift registers.
-			run("dfflegalize -cell $_DFFSR_PPP_ 0 -cell $_DFF_PP?_ 0 -cell $_DFFE_PP_ 0 -cell $_DFF_P_ 0 -cell $_DLATCH_PP?_ x -cell $_DLATCH_P_ x");
-			run("shregmap -zinit -minlen 4 -maxlen 4 -match $_DFFE_PP_ -match $_DFF_P_");
+			//run("dfflegalize -cell $_DFFSR_PPP_ 0 -cell $_DFF_PP?_ 0 -cell $_DFFE_PP_ 0 -cell $_DFF_P_ 0 -cell $_DLATCH_PP?_ x -cell $_DLATCH_P_ x");
+			//run("shregmap -zinit -minlen 4 -maxlen 4 -match $_DFFE_PP_ -match $_DFF_P_");
 			run("dfflegalize -cell $_DFFSR_PPP_ 0 -cell $_DFF_PP?_ 0 -cell $_DFF_P_ 0 -cell $_DLATCH_PP?_ x -cell $_DLATCH_P_ x");
 			run("techmap -map +/quicklogic/eclipse2/dff_map.v");
 			run("opt -full -undriven -mux_undef");
@@ -204,6 +204,7 @@ struct SynthEclipse2Pass : public ScriptPass {
 				run("clkbufmap -inpad ckpad Q:P", "(unless -noclkbuf)");
 			if (!noiopad)
 				run("iopadmap -bits -outpad outpad A:P -inpad inpad Q:P -tinoutpad bipad EN:Q:A:P A:top", "(unless -noiopad)");
+			run("hilomap -hicell logic_1 A -locell logic_0 A -singleton");
 			run("clean");
 			run("hierarchy -check");
 			run("stat");
